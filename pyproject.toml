@@ -1,7 +1,7 @@
 [project]
-name = "example-plugin"
+name = "maasr-plugin-npcap"
 version = "1.0.0"
-description = "MaaStarResonance 侧载插件模板示例"
+description = "MaaStarResonance Npcap 插件"
 authors = [
     { name = "AZMIAO", email = "2362020227@qq.com" },
 ]
@@ -11,7 +11,9 @@ requires-python = ">=3.13"
 # 只包含插件实际需要打包的依赖
 dependencies = [
     # 示例：如果你的插件需要某些主项目没有的库
-    # "requests>=2.31.0",
+    "protobuf>=5.29.0",
+    "scapy>=2.6.1",
+    "zstandard>=0.23.0",
 ]
 
 [project.optional-dependencies]
@@ -38,9 +40,9 @@ packages = ["scripts", "plugin_framework"]
 
 # 插件元数据配置
 [tool.plugin]
-name = "example_plugin"
-display_name = "示例插件"
-entry_point = "maasr_plugin_example"
+name = "maasr-plugin-npcap"
+display_name = "NpCap 插件"
+entry_point = "maasr_plugin_npcap"
 platform = "windows"
 min_python_version = "3.13"
 

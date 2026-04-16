@@ -5,10 +5,10 @@
 """
 from typing import Any
 
-from maasr_plugin_example.utils.common_util import get_runtime_config
+from maasr_plugin_npcap.utils.common_util import get_runtime_config
 
 
-class ExamplePlugin:
+class NpcapPlugin:
     """示例插件类
     
     这是一个简单的插件示例，展示了插件的基本结构。
