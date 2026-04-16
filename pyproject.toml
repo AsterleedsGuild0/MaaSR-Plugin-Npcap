@@ -1,0 +1,57 @@
+[project]
+name = "example-plugin"
+version = "1.0.0"
+description = "MaaStarResonance 侧载插件模板示例"
+authors = [
+    { name = "AZMIAO", email = "2362020227@qq.com" },
+]
+license = { text = "AGPL-3.0" }
+readme = "README.md"
+requires-python = ">=3.13"
+# 只包含插件实际需要打包的依赖
+dependencies = [
+    # 示例：如果你的插件需要某些主项目没有的库
+    # "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+# 开发依赖：主项目已有的依赖，仅用于本地开发
+dev = [
+    # 取消注释主项目已有的依赖后，本项目开发时可以使用，但是打包不会带上这些依赖
+    "pip>=25.3",
+#    "loguru>=0.7.3",
+#    "maafw==5.10.0",
+#    "pre-commit>=4.5.0",
+#    "rapidfuzz>=3.14.3",
+#    "toml>=0.10.2",
+#    "tzdata>=2025.2",
+]
+
+[project.scripts]
+init-dev = "scripts.init_dev:main"
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+packages = ["scripts", "plugin_framework"]
+
+# 插件元数据配置
+[tool.plugin]
+name = "example_plugin"
+display_name = "示例插件"
+entry_point = "maasr_plugin_example"
+platform = "windows"
+min_python_version = "3.13"
+
+# isort检查工具配置
+[tool.isort]
+src_paths = ["src", "scripts"]
+force_single_line = false
+multi_line_output = 0
+include_trailing_comma = false
+ensure_newline_before_comments = true
+line_length = 120
+combine_as_imports = true
+lines_between_sections = 1
+sections = ["STDLIB", "THIRDPARTY", "FIRSTPARTY"]
