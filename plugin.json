@@ -1,22 +1,16 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "name": "maasr-plugin-npcap",
+  "$schema": "docs/plugin-schema.json",
+  "name": "maasr_plugin_npcap",
   "display_name": "NpCap 插件",
   "version": "1.0.0",
   "description": "MaaStarResonance Npcap 插件",
   "author": "AZMIAO",
   "license": "AGPL-3.0",
-  "pyz_file": "lib/maasr-plugin-npcap.pyz",
+  "pyz_file": "lib/maasr_plugin_npcap.pyz",
   "entry_point": "maasr_plugin_npcap",
   "dependencies": [
     "protobuf>=5.29.0",
     "scapy>=2.6.1",
     "zstandard>=0.23.0"
-  ],
-  "system_requirements": {
-    "platform": "windows",
-    "min_python_version": "3.13",
-    "notes": ""
-  },
-  "exports": {}
+  ]
 }
