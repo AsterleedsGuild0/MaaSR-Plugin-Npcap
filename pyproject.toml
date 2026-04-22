@@ -21,7 +21,7 @@ dependencies = [
 dev = [
     # 取消注释主项目已有的依赖后，本项目开发时可以使用，但是打包不会带上这些依赖
     "pip>=25.3",
-#    "loguru>=0.7.3",
+    "loguru>=0.7.3",
 #    "maafw==5.10.0",
 #    "pre-commit>=4.5.0",
 #    "rapidfuzz>=3.14.3",
@@ -35,8 +35,9 @@ init-dev = "scripts.init_dev:main"
 [tool.uv]
 package = true
 
-[tool.setuptools]
-packages = ["scripts", "plugin_framework"]
+[tool.setuptools.packages.find]
+where = ["src", "."]
+exclude = ["tests*", "docs*"]
 
 # 插件元数据配置
 [tool.plugin]
