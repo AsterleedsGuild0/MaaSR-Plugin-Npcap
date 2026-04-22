@@ -7,6 +7,7 @@ version = "1.0.0"
 description = "MaaStarResonance Npcap 插件"
 # 作者
 authors = [
+    { name = "Particle_G", email = "particle_g@outlook.com" },
     { name = "AZMIAO", email = "2362020227@qq.com" },
 ]
 # License

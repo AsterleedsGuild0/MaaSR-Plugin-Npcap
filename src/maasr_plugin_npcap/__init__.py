@@ -1,9 +1,9 @@
+"""NpCap 插件
+
+提供基于 Npcap 的游戏网络抓包功能，实时提取玩家位置和信息。
 """
-示例插件
 
-这是插件的核心代码，只包含插件的业务逻辑。
-"""
+from maasr_plugin_npcap.npcap_plugin import NpcapPlugin
+from maasr_plugin_npcap.player_tracker import PlayerInfo, PlayerPosition
 
-from src.maasr_plugin_npcap.npcap_plugin import NpcapPlugin
-
-__all__ = ["NpcapPlugin"]
+__all__ = ["NpcapPlugin", "PlayerInfo", "PlayerPosition"]

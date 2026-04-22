@@ -4,7 +4,10 @@
   "display_name": "NpCap 插件",
   "version": "1.0.0",
   "description": "MaaStarResonance Npcap 插件",
-  "author": "AZMIAO",
+  "authors": [
+    "Particle_G",
+    "AZMIAO"
+  ],
   "license": "AGPL-3.0",
   "pyz_file": "lib/maasr_plugin_npcap.pyz",
   "entry_point": "maasr_plugin_npcap",
